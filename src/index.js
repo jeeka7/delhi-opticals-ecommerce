@@ -1,0 +1,16 @@
+// src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css'; // Import your Tailwind CSS
+import App from './App'; // Import your App component
+import { AppProvider } from './components/AppContext'; // Import AppProvider
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    {/* Wrap the entire App with AppProvider */}
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </React.StrictMode>
+);
